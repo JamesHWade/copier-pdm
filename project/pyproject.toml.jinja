@@ -103,7 +103,6 @@ Changelog = "https://{{ repository_namespace }}.{{ repository_provider.rsplit('.
 Repository = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_name }}"
 Issues = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_name }}/issues"
 Discussions = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_name }}/discussions"
-Gitter = "https://gitter.im/{% if repository_namespace != author_username %}{{ repository_namespace }}/{{ repository_name }}{% else %}{{ repository_name }}/community{% endif %}"
 {%- if repository_provider == "github.com" %}
 Funding = "https://{{ repository_provider }}/sponsors/{{ author_username }}"
 {%- endif %}
@@ -129,7 +128,6 @@ duty = ["duty>=0.10"]
 ci-quality = ["{{ python_package_distribution_name }}[duty,docs,quality,typing,security]"]
 ci-tests = ["{{ python_package_distribution_name }}[duty,tests]"]
 docs = [
-    "black>=23.9",
     "markdown-callouts>=0.3",
     "markdown-exec>=1.7",
     "mkdocs>=1.5",
@@ -144,8 +142,6 @@ docs = [
     "tomli>=2.0; python_version < '3.11'",
 ]
 maintain = [
-    "black>=23.9",
-    "blacken-docs>=1.16",
     "git-changelog>=2.3",
 ]
 quality = [

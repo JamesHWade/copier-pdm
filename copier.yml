@@ -26,17 +26,17 @@ project_description:
 author_fullname:
   type: str
   help: Your full name
-  default: "{{ 'Timothée Mazzucotelli' | git_user_name }}"
+  default: "{{ 'James Wade' | git_user_name }}"
 
 author_email:
   type: str
   help: Your email
-  default: "{{ 'pawamoy@pm.me' | git_user_email }}"
+  default: "{{ 'github@jameshwade.com' | git_user_email }}"
 
 author_username:
   type: str
   help: Your username (e.g. on GitHub)
-  default: pawamoy
+  default: jameshwade
 
 repository_provider:
   type: str
@@ -73,7 +73,7 @@ copyright_date:
 copyright_license:
   type: str
   help: Your project's license
-  default: ISC License
+  default: MIT License
   choices:
   - Academic Free License v3.0
   - Apache License 2.0
@@ -140,3 +140,8 @@ public_release:
   help: Is this project already released publicly?
   default: false
   when: "{{ insiders }}"
+
+use_precommit:
+    type: bool
+    default: false
+    help: Do you want to use pre-commit?

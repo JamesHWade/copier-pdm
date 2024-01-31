@@ -1,9 +1,5 @@
 # Copier PDM
 
-[![ci](https://github.com/pawamoy/copier-pdm/workflows/ci/badge.svg)](https://github.com/pawamoy/copier-pdm/actions?query=workflow%3Aci)
-[![documentation](https://img.shields.io/badge/docs-mkdocs%20material-blue.svg?style=flat)](https://pawamoy.github.io/copier-pdm/)
-[![gitter](https://badges.gitter.im/join%20chat.svg)](https://app.gitter.im/#/room/#copier-pdm/community:gitter.im)
-
 [Copier](https://github.com/copier-org/copier) template
 for Python projects managed by [PDM](https://github.com/pdm-project/pdm).
 
@@ -33,9 +29,20 @@ but feel free to try it out, or fork it!
 
 ## Quick setup and usage
 
-Make sure all the
-[requirements](https://pawamoy.github.io/copier-pdm/requirements)
-are met, then:
+To get started, ensure that all [requirements](https://pawamoy.github.io/copier-pdm/requirements) are met. You can find the full documentation [here](https://pawamoy.github.io/copier-pdm).
+
+First, install Copier with pipx (or pip) if you haven't already done so:
+
+```bash
+pipx install copier
+```
+Then install the Jinja extensions:
+
+```bash
+pipx inject copier copier-templates-extensions
+```
+
+Then, run the following command to create a new project:
 
 ```bash
 copier copy --trust "https://github.com/jameshwade/copier-pdm.git" /path/to/your/new/project
